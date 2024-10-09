@@ -27,11 +27,14 @@ public class User {
     @Column(name = "userName", length = 40)
     private String userName;
 
+    @Column(name ="password", length = 30)
+    private String password;
+
     public User() {
         super();
     }
 
-    public User(Long id, String identification, String name, String lastName, String address, String email, String userName) {
+    public User(Long id, String identification, String name, String lastName, String address, String email, String userName, String password) {
         this.id = id;
         this.identification = identification;
         this.name = name;
@@ -39,15 +42,17 @@ public class User {
         this.address = address;
         this.email = email;
         this.userName = userName;
+        this.password = password;
     }
 
-    public User(String identification, String name, String lastName, String address, String email, String userName) {
+    public User(String identification, String name, String lastName, String address, String email, String userName, String password) {
         this.identification = identification;
         this.name = name;
         this.lastName = lastName;
         this.address = address;
         this.email = email;
         this.userName = userName;
+        this.password = password;
     }
 
     public Long getId() {
@@ -100,5 +105,13 @@ public class User {
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
