@@ -20,6 +20,8 @@ public class UserController {
         return "/users/list";
     }
 
+
+
     @GetMapping("/delete/{id}")
     public String deleteUser(@PathVariable("id") Long id, Model model){
         userService.deleteUser(id);
